@@ -11,6 +11,14 @@ body,html{
     height: 100%;
     background-color:#787FF6;
 }
-#canva{
-    background-color:white;
+#message-container{
+    text-align: center;
+    height: 50%;
+    width:30%;
+}
+#canvas-container{
+    width: 70%;
+}
+#text,#title{
+    color:white;
 }

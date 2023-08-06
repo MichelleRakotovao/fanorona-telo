@@ -1,26 +1,26 @@
 const Canvas=document.getElementById("canvas")
 const ctx=Canvas.getContext("2d")
 
-//traçage de la table
 ctx.fillStyle="white"
 ctx.lineWidth=2
 ctx.strokeStyle='#787FF6'
-const canvasWidth=600
-const canvasHeigth=600
-ctx.beginPath()
-ctx.fillRect(0,0,canvasWidth,canvasHeigth)
 
-ctx.moveTo(tab[0][0].x,tab[0][0].y)
-ctx.lineTo(tab[2][2].x,tab[2][2].y)
+const canvasWidth=500
+const canvasHeigth=500
 
-ctx.moveTo(tab[0][2].x,tab[0][2].y)
-ctx.lineTo(tab[2][0].x,tab[2][0].y)
+drawBoard()
+ 
+const Player1=new Player()
+const Player2=new Player()
 
-ctx.moveTo(tab[0][1].x,tab[0][1].y)
-ctx.lineTo(tab[2][1].x,tab[2][1].y)
-
-ctx.moveTo(tab[1][0].x,tab[1][0].y)
-ctx.lineTo(tab[1][2].x,tab[1][2].y)
-ctx.stroke()
-
-
+Canvas.addEventListener("click",(e)=>{
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++){
+        x=e.offsetX
+        y=e.offsetY
+        if(isClose(x,y,tab[i][j].x,tab[i][j].y)){
+            console.log(tab[i][j])
+        }  
+    }
+  }
+})
