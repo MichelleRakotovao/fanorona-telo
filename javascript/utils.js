@@ -5,7 +5,12 @@ function distance(xA,yA,xB,yB){
 
 //fonction vérifiant si la distance entre deux pts est inférieur à 150
 function isClose(xA,yA,xB,yB){
-    if (distance(xA,yA,xB,yB)<150){
-        return true
-    }
+  return (distance(xA,yA,xB,yB)<150)?true:false
 }
+
+//vérifie si le nombre total de pions n'est pas supérieur à 6
+function verifyTotalPions(){
+  return (Pion.totalPions<6)?true:false
+}
+
+

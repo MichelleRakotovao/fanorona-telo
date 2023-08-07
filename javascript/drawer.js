@@ -1,9 +1,8 @@
-
 //traçage de la table
 function drawBoard(){
     ctx.beginPath()
     ctx.fillRect(100,100,canvasWidth,canvasHeigth)
-        
+
     ctx.moveTo(tab[0][0].x,tab[0][0].y)
     ctx.lineTo(tab[2][2].x,tab[2][2].y)
         
@@ -17,5 +16,3 @@ function drawBoard(){
     ctx.lineTo(tab[1][2].x,tab[1][2].y)
     ctx.stroke()
 }
-   
-

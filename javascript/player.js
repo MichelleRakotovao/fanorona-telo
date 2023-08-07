@@ -1,4 +1,3 @@
 class Player{
-   nbrePions
-   tour
+   static tourPlayer1=true
 }
