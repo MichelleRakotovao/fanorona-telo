@@ -4,7 +4,7 @@ class Pion{
     isPlayer1
     //nombre de pions de chaque joueur
     static pionsP1=0
-    static pions2=0
+    static pionsP2=0
     static totalPions=0
 
     constructor(X,Y){
@@ -14,7 +14,7 @@ class Pion{
 drawPion(){
     if (this.isPlayer1==true){
         ctx.beginPath()
-        ctx.fillStyle="#6096FD"
+        ctx.fillStyle="#14446B"
     }else{ 
         ctx.beginPath()
         ctx.fillStyle="gold"

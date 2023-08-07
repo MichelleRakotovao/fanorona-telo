@@ -15,8 +15,8 @@ const Player1=new Player()
 const Player2=new Player()
 
 Canvas.addEventListener("click",(e)=>{
-  Pion.totalPions=Pion.pionsP1+Pion.pions2//nombre total des pions
-  
+  Pion.totalPions=Pion.pionsP1+Pion.pionsP2//nombre total des pions
+
   for(let i = 0; i < 3; i++){
     for (let j = 0; j < 3; j++){
      
@@ -25,15 +25,26 @@ Canvas.addEventListener("click",(e)=>{
 
       if(isClose(x,y,tab[i][j].x,tab[i][j].y)){
         if (verifyTotalPions()){
+
           if(tab[i][j].state==true){
             alert(`Il y a déja un pion dans cette position!`)
           }else{
             alert(`${tab[i][j].x},${tab[i][j].y}`) 
             tab[i][j].state=true
-            ++Pion.pionsP1
+            let pion=new Pion(tab[i][j].x,tab[i][j].y)
+
+            if(verifyNbrePionsP1()){
+              ++Pion.pionsP1
+              pion.isPlayer1=true
+              pion.drawPion()
+            }else{
+              ++Pion.pionsP2
+              pion.isPlayer1=false
+              pion.drawPion()
+            }
           }
         }else{
-          alert(`Le nombre de de pions ne peut pas exceder 6!`)
+          alert(`déplacement!`)
         }
       
         
